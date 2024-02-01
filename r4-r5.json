@@ -1,0 +1,302 @@
+[
+  {
+    "R4ElementId": "Account.partOf",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Account.relatedAccount.account",
+        "rationale": "The relatedAccount property in R5 captures the association to other accounts, which can include parent accounts as in R4's partOf.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "AdverseEvent.date",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "AdverseEvent.occurrence[x]",
+        "rationale": "Direct renaming from 'AdverseEvent.date' to 'AdverseEvent.occurrence[x]'",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "AdverseEvent.suspectEntity.causality.assessment",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "AdverseEvent.suspectEntity.causality.entityRelatedness",
+        "rationale": "Represents the result of the causality assessment in R5, aligning with the purpose of the assessment element in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "AdverseEvent.suspectEntity.causality.method",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "AdverseEvent.suspectEntity.causality.assessmentMethod",
+        "rationale": "This R5 target element appears to be a renamed direct equivalent of the R4 source element, maintaining a similar definition and context within the adverse event causality assessment.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "AdverseEvent.subjectMedicalHistory",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "AdverseEvent.supportingInfo.item[x]",
+        "rationale": "In R5, 'supportingInfo' provides information relevant to the adverse event that is not a contributing factor, preventive action, or mitigating action, which may include medical history.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Appointment.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Appointment.reason",
+        "rationale": "The R4 'reasonReference' has been replaced and broadened by the R5 'reason' which now includes the ability to reference other resources as well as codeable concepts to indicate the reason for the appointment.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "AuditEvent.period",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "AuditEvent.occurred[x]",
+        "rationale": "In R5, 'occurred[x]' is the direct equivalent to R4's 'period', representing when the activity occurred with a choice of type Period or dateTime.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "AuditEvent.outcomeDesc",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "AuditEvent.outcome.detail",
+        "rationale": "Represents the text description of the event outcome in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "AuditEvent.agent.network.address",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "AuditEvent.agent.network[x]",
+        "rationale": "Represents network location for the activity including an URI or string.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "BiologicallyDerivedProduct.status",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "BiologicallyDerivedProduct.productStatus",
+        "rationale": "The R5 `BiologicallyDerivedProduct.productStatus` appears to be a direct renaming of the R4 `BiologicallyDerivedProduct.status` element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "BodyStructure.locationQualifier",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "BodyStructure.includedStructure.qualifier",
+        "rationale": "R5 includes 'qualifier' within included structures to refine the anatomical location, which aligns with R4's 'locationQualifier' concept.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "CarePlan.activity.outcomeReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "CarePlan.activity.performedActivity",
+        "rationale": "The R5 'performedActivity' element also seems to capture references to concrete instances of activities that have been performed as a part of the care plan, similar to R4's 'outcomeReference'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "CareTeam.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "CareTeam.reason",
+        "rationale": "The R5 'reason' element captures the reasons why the care team exists, which can now include both codeable concepts and references, effectively replacing and expanding the 'reasonCode' from R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "CareTeam.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "CareTeam.reason",
+        "rationale": "The R5 element 'CareTeam.reason' is designed to describe why the care team exists and represents the direct equivalent to the R4 element 'CareTeam.reasonReference', which serves the same purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ChargeItem.context",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ChargeItem.encounter",
+        "rationale": "In R4, 'context' is used to reference the encounter or episode of care with which the charge item is associated. In R5, the element 'encounter' has been introduced with a similar, if not identical, purpose, thus serving as a direct replacement.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ChargeItemDefinition.applicability.expression",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ChargeItemDefinition.applicability.condition",
+        "rationale": "The purpose of both elements is to hold an expression that evaluates to true or false.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Claim.diagnosis.packageCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Claim.diagnosisRelatedGroup",
+        "rationale": "The 'Claim.diagnosisRelatedGroup' in R5 seems to capture similar bundle code concepts as 'packageCode' in R4, meant for grouping related services for certain health conditions based on predetermined code systems.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Claim.item.subSite",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Claim.item.bodySite.subSite",
+        "rationale": "In R5, the sub-location information is stored under the bodySite structure within the item.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ClaimResponse.item.adjudication.value",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ClaimResponse.item.adjudication.quantity",
+        "rationale": "In R5, 'value' is renamed to 'quantity' but retains the same meaning and usage.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ClinicalImpression.finding.itemCodeableConcept",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ClinicalImpression.finding.item",
+        "rationale": "In R5, the item element has a type of CodeableReference, which can support a CodeableConcept, thereby representing a similar concept as R4's itemCodeableConcept.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ClinicalImpression.finding.itemReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ClinicalImpression.finding.item",
+        "rationale": "In R5, the 'item' element within 'ClinicalImpression.finding' can now include both a 'CodeableConcept' or a 'Reference', which matches the purpose of 'itemReference' in R4 to point to a 'Reference' for the finding.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Communication.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Communication.reason",
+        "rationale": "Though the names are not identical, the 'reasonCode' element from R4 appears to have been replaced by the 'reason' element in R5. The 'reason' element in R5 captures the reason or justification for the communication, similar to what 'reasonCode' represented in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Communication.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Communication.reason",
+        "rationale": "In R5, 'reasonReference' has been replaced with 'reason' which can include both CodeableConcept and Reference within CodeableReference, making it suitable for the same purpose as 'reasonReference' in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "CommunicationRequest.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "CommunicationRequest.reason",
+        "rationale": "The 'reason' element in R5 includes coded representations for why the communication is needed, which encompasses the concept of 'reasonCode' from R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "CommunicationRequest.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "CommunicationRequest.reason",
+        "rationale": "In R5, 'CommunicationRequest.reason' replaces 'CommunicationRequest.reasonReference', extending the definition to allow both coded and textual explanations for why the communication is needed.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Composition.relatesTo.target[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Composition.relatesTo",
+        "rationale": "In FHIR R5, the 'Composition.relatesTo' field itself provides the relationship, including the 'target' of the relationship through the 'RelatedArtifact' data type, capturing the reference or identifier of the target resource.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Composition.event.code",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Composition.event.detail",
+        "rationale": "The 'Composition.event.detail' in R5 has been enriched to include the event(s) as code(s), reference(s), or both, thus incorporating the 'Composition.event.code' concept from R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ConceptMap.source[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ConceptMap.sourceScope[x]",
+        "rationale": "Renamed from 'source[x]' in R4 to 'sourceScope[x]' in R5 to clarify the meaning and scope of the source concepts.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ConceptMap.group.element.target.equivalence",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ConceptMap.group.element.target.relationship",
+        "rationale": "In R5, 'ConceptMap.group.element.target.equivalence' has been renamed to 'ConceptMap.group.element.target.relationship'. The purpose and allowed values for this element remain fundamentally the same with updated terminology and concept meanings to clarify usage.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Consent.policy.uri",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Consent.policyBasis.url",
+        "rationale": "The R4 'Consent.policy.uri' maps to R5 'Consent.policyBasis.url', reflecting a URL that points to a computable version of the policy.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  }
+]
