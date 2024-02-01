@@ -298,5 +298,3040 @@
         "qualityOfMatch": "strong"
       }
     ]
+  },
+  {
+    "R4ElementId": "Contract.term.action.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Contract.term.action.reason",
+        "rationale": "In FHIR R5, 'Contract.term.action.reason' replaces the 'reasonCode' from R4, encapsulating the reason for the action with the possibility of pointing to a 'CodeableReference' which can hold a 'CodeableConcept' like 'reasonCode' used to.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Contract.term.action.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Contract.term.action.reason",
+        "rationale": "In FHIR R5, the 'reasonReference' element is replaced with the 'reason' element, which is of type CodeableReference capable of referencing other resources, thereby replacing the direct 'reasonReference'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Coverage.payor",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Coverage.insurer",
+        "rationale": "In FHIR R4, the 'payor' field represents the organization or party that pays for the insurance coverage. In FHIR R5, the 'insurer' field seems to capture the party that is responsible for providing the insurance coverage and fulfilling payment, which is conceptually equivalent to the 'payor'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DetectedIssue.patient",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DetectedIssue.subject",
+        "rationale": "In R5, 'DetectedIssue.patient' has been renamed to 'DetectedIssue.subject' to generalize the concept, allowing encounters and episodes of care to be referenced in addition to patients.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Device.deviceName.name",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Device.name.value",
+        "rationale": "Both R4 'Device.deviceName.name' and R5 'Device.name.value' serve the purpose of specifying the actual name that identifies the device.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Device.property.valueQuantity",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Device.property.value[x]",
+        "rationale": "In R5, 'Device.property.value[x]' can be a Quantity, which directly aligns with the 'valueQuantity' from R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Device.property.valueCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Device.property.value[x]",
+        "rationale": "This element captures the value of the device property in R5 which can be code among other types like quantity, string, etc.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DeviceDefinition.property.valueQuantity",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DeviceDefinition.property.value[x]",
+        "rationale": "The 'value[x]' in R5 indicates a choice of data types, including Quantity, which can directly represent the 'valueQuantity' from R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DeviceDefinition.property.valueCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DeviceDefinition.property.value[x]",
+        "rationale": "In R5, the 'value[x]' field is a choice of data types that replace and include the concept of R4's 'valueCode'. It's an expansion to support multiple types, including CodeableConcept (presumably equivalent to R4 'valueCode').",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DeviceMetric.source",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DeviceMetric.device",
+        "rationale": "The R5 'DeviceMetric.device' describes the link to the Device, which serves the same purpose as R4's 'DeviceMetric.source'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DeviceMetric.measurementPeriod",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DeviceMetric.measurementFrequency",
+        "rationale": "The concept of scheduling or timing the measurement which was represented as 'measurementPeriod' in R4 seems to have a renamed direct equivalent in R5 as 'measurementFrequency', which carries a similar definition and intended use.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DeviceRequest.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DeviceRequest.reason",
+        "rationale": "In R5, the reasonCode and reasonReference have been combined into a single element called 'reason'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DeviceRequest.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DeviceRequest.reason",
+        "rationale": "In R5, 'reasonCode' and 'reasonReference' from R4 are combined into 'reason'. It now uses 'CodeableReference' to support both code and reference.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DiagnosticReport.imagingStudy",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DiagnosticReport.study",
+        "rationale": "The R5 'study' element encompasses the full details of imaging or other types of studies associated with the diagnostic report, directly correlating with the R4 'imagingStudy' which provided references to imaging associated with the report.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DocumentReference.context.event",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DocumentReference.event",
+        "rationale": "Directly maps to the 'event' field in R5, representing the same concept.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DocumentReference.context.period",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DocumentReference.period",
+        "rationale": "Both elements represent the time period over which the service described by the document was provided.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DocumentReference.context.facilityType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DocumentReference.facilityType",
+        "rationale": "Direct renaming of the element from R4 to R5 with the same definition and usage.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "DocumentReference.context.practiceSetting",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "DocumentReference.practiceSetting",
+        "rationale": "Direct renaming of the element from R4 to R5 without changes in definition.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.reason.value",
+        "rationale": "In FHIR R5, 'Encounter.reason.value' is defined to provide the reason the encounter takes place, both as a core concept or as a reference, similar to R4's 'Encounter.reasonReference'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.hospitalization.preAdmissionIdentifier",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.admission.preAdmissionIdentifier",
+        "rationale": "Both elements represent a pre-admission identifier in the context of hospitalization admission details.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.hospitalization.origin",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.admission.origin",
+        "rationale": "The 'Encounter.hospitalization.origin' element in R4 represents the location/organization from which the patient came before admission. In R5, this concept is directly preserved in 'Encounter.admission.origin'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.hospitalization.admitSource",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.admission.admitSource",
+        "rationale": "Direct renaming of the element from R4 to R5 maintaining the same concept and definition.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.hospitalization.reAdmission",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.admission.reAdmission",
+        "rationale": "In R5, the field has been moved under the 'admission' substructure but retains the same concept and purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.hospitalization.dietPreference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.dietPreference",
+        "rationale": "Directly renamed from R4 to R5 with the same definition and purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.hospitalization.specialCourtesy",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.specialCourtesy",
+        "rationale": "The element is directly carried over from R4 to R5 with no changes in its definition or name, representing the special courtesies provided to the patient during the encounter.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.hospitalization.specialArrangement",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.specialArrangement",
+        "rationale": "Direct renaming of the element from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.hospitalization.destination",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.admission.destination",
+        "rationale": "Direct renaming of the element from R4 to R5 with the same definition and purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Encounter.hospitalization.dischargeDisposition",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Encounter.admission.dischargeDisposition",
+        "rationale": "The element maintains the same concept and meaning, and its location in the resource structure has been simply altered from 'hospitalization' to 'admission'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Endpoint.payloadType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Endpoint.payload.type",
+        "rationale": "The R5 'Endpoint.payload.type' seems to be a direct renaming of the R4 'Endpoint.payloadType', preserving the meaning of specifying the content type usable at the endpoint.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Endpoint.payloadMimeType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Endpoint.payload.mimeType",
+        "rationale": "The R5 element retains the essence and function of specifying mime types for the payload, albeit within a nested 'payload' structure.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Evidence.exposureVariant",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Evidence.variableDefinition",
+        "rationale": "Exposure variants in R4 are described as references to EvidenceVariable resources that define the exposure for the research. In R5, comparable information is represented under 'Evidence.variableDefinition', describing the evidence variables like population, exposure, or outcomes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ExampleScenario.instance.version.versionId",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ExampleScenario.instance.version.key",
+        "rationale": "R5 renamed the 'versionId' to 'key' while retaining the concept of a unique identifier within the instance version.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ExplanationOfBenefit.careTeam.qualification",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ExplanationOfBenefit.careTeam.specialty",
+        "rationale": "In FHIR R5, the 'qualification' field has been renamed to 'specialty'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ExplanationOfBenefit.item.subSite",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ExplanationOfBenefit.item.bodySite.subSite",
+        "rationale": "Element renamed and changed to capture sub-locations of body site in a more structured way as CodeableConcept within the 'bodySite' backbone element specifically planned for such data.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ExplanationOfBenefit.item.adjudication.value",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ExplanationOfBenefit.item.adjudication.quantity",
+        "rationale": "The R5 'quantity' element under 'item.adjudication' appears to be the direct equivalent of R4's 'value', serving the same purpose to represent non-monetary adjudication amounts.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "FamilyMemberHistory.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "FamilyMemberHistory.reason",
+        "rationale": "In R5, 'reason' replaces both 'reasonCode' and 'reasonReference', combining the concept of a reason for the family member history as either a CodeableConcept or a Reference.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "FamilyMemberHistory.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "FamilyMemberHistory.reason",
+        "rationale": "The R5 'reason' element captures the justification for the family member history, which can incorporate references to Conditions, Observations, AllergyIntolerances, or QuestionnaireResponses, similar to the R4 'reasonReference'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Goal.outcomeCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Goal.outcome",
+        "rationale": "Both elements represent the actual result achieved regarding the goal. The main difference is the structural change from 'CodeableConcept' in R4 to 'CodeableReference' in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Goal.outcomeReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Goal.outcome",
+        "rationale": "In FHIR R5, the Goal.outcomeReference was replaced by Goal.outcome, which broadens the concept to include both references and codes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GraphDefinition.profile",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GraphDefinition.node.profile",
+        "rationale": "Both elements define the profile for the resource within the context of graph definitions.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GraphDefinition.link.target.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GraphDefinition.node.type",
+        "rationale": "In R5, 'GraphDefinition.link.target' has been replaced with 'GraphDefinition.node', and the 'type' field has been moved under 'node'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GraphDefinition.link.target.params",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GraphDefinition.link.params",
+        "rationale": "Direct renaming of the element from R4 to R5 with identical purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GraphDefinition.link.target.profile",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GraphDefinition.node.profile",
+        "rationale": "In R5, 'GraphDefinition.link.target.profile' has been restructured under 'GraphDefinition.node' to define the profile on the node level rather than as a direct target element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GraphDefinition.link.target.compartment.use",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GraphDefinition.link.compartment.use",
+        "rationale": "Element has been moved from the 'target.compartment' path in R4 to directly under 'link.compartment' in R5 with the same name and meaning.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GraphDefinition.link.target.compartment.code",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GraphDefinition.link.compartment.code",
+        "rationale": "The element maintains its name and semantic meaning from R4 to R5, representing the compartment code.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GraphDefinition.link.target.compartment.rule",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GraphDefinition.link.compartment.rule",
+        "rationale": "Direct renaming of element from R4 to R5 with preserved semantics.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GraphDefinition.link.target.compartment.expression",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GraphDefinition.link.compartment.expression",
+        "rationale": "Direct renaming from R4 to R5 with the same definition and semantics.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GraphDefinition.link.target.compartment.description",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GraphDefinition.link.compartment.description",
+        "rationale": "The R5 element maintains the same name and is located within the 'link' element structure similar to R4, serving the same purpose to provide documentation for the FHIRPath expression.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GuidanceResponse.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GuidanceResponse.reason",
+        "rationale": "The 'reasonCode' element in R4 seems to have been replaced with 'reason' in R5, now also allowing for references (CodeableReference) indicating why guidance was needed.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "GuidanceResponse.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "GuidanceResponse.reason",
+        "rationale": "In R5, 'reasonReference' and 'reasonCode' from R4 are combined into a single element 'reason' which can include both coded and reference data.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "HealthcareService.telecom",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "HealthcareService.contact",
+        "rationale": "Represents a more structured form of contact details, including communication methods.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "HealthcareService.availableTime.daysOfWeek",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "HealthcareService.availability",
+        "rationale": "HealthcareService.availableTime.daysOfWeek has been incorporated as part of the new Availability backbone element in R5, which defines available days alongside other timing and exception information.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ImagingStudy.procedureReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ImagingStudy.procedure",
+        "rationale": "In R5, 'ImagingStudy.procedureReference' is replaced with 'ImagingStudy.procedure' which now accepts a CodeableReference that can contain reference details.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ImagingStudy.procedureCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ImagingStudy.procedure",
+        "rationale": "In R5, 'ImagingStudy.procedure' provides the performed procedure information which can include both a reference to a Procedure resource or a codeable concept representing the procedure, effectively combining the 'ImagingStudy.procedureReference' and 'ImagingStudy.procedureCode' of R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ImagingStudy.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ImagingStudy.reason",
+        "rationale": "In R5, 'reasonCode' and 'reasonReference' from R4 are combined into a single 'reason' element which can contain both the CodeableConcept and Reference. The 'reason' element is used to express why the ImagingStudy was requested/performed.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ImagingStudy.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ImagingStudy.reason",
+        "rationale": "In FHIR R5, the 'ImagingStudy.reasonReference' has been replaced by 'ImagingStudy.reason', which is defined as a CodeableReference that can accommodate a Reference to another resource justifying the ImagingStudy.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Immunization.reportOrigin",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Immunization.informationSource",
+        "rationale": "The R5 'informationSource' element captures the source of data when the immunization report is not based on information from the person who administered the vaccine, which aligns with the purpose of the R4 'reportOrigin' element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Immunization.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Immunization.reason",
+        "rationale": "The reason for administration in R5 is conveyed similarly as in R4's reasonCode, capturing coded or text justification for the immunization event.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Immunization.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Immunization.reason",
+        "rationale": "In FHIR R5, the 'reason' element covers the reason for the immunization, which can include a reference to a supporting resource, conceptually aligning with the R4 'reasonReference'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Immunization.reaction.detail",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Immunization.reaction.manifestation",
+        "rationale": "In FHIR R5, 'Immunization.reaction.manifestation' represents a similar concept and captures information on the details of a reaction.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ImplementationGuide.definition.resource.example[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ImplementationGuide.definition.resource.isExample",
+        "rationale": "Represents the same concept indicating whether a resource is an example instance.",
+        "qualityOfMatch": "strong"
+      },
+      {
+        "R5ElementId": "ImplementationGuide.definition.resource.profile",
+        "rationale": "The example[x] element in R4 can include a reference to a profile that the example should conform to. R5 has separated out the profile reference into its own element.",
+        "qualityOfMatch": "medium"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ImplementationGuide.manifest.resource.example[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ImplementationGuide.manifest.resource.isExample",
+        "rationale": "The R5 element represents whether a resource in the ImplementationGuide is an example, akin to the example[x] boolean in R4.",
+        "qualityOfMatch": "strong"
+      },
+      {
+        "R5ElementId": "ImplementationGuide.manifest.resource.profile",
+        "rationale": "In R5, 'profile' indicates what profiles an example resource conforms to, which captures part of the concept of example[x] where it is a canonical reference indicating what the resource is an example of.",
+        "qualityOfMatch": "medium"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Location.telecom",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Location.contact",
+        "rationale": "In FHIR R4, 'Location.telecom' is used to specify the contact details of communication devices available at the location. In FHIR R5, 'Location.contact' has been introduced to encapsulate not only communication devices but also addresses, encompassing the data that 'telecom' would represent.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Location.availabilityExceptions",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Location.hoursOfOperation",
+        "rationale": "The 'Location.hoursOfOperation' in R5 includes both the regular scheduled availability and any exceptions where the location is not available.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MarketingStatus",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MarketingStatus",
+        "rationale": "Direct renaming of the element with matching definitions and cardinality.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MarketingStatus.country",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MarketingStatus.country",
+        "rationale": "Both R4 and R5 elements represent the country in which the marketing authorisation has been granted, specified using the ISO 3166 ‑ 1 alpha-2 code elements.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MarketingStatus.jurisdiction",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MarketingStatus.jurisdiction",
+        "rationale": "The element has the same name and definition in both R4 and R5, indicating it remains unchanged and directly equivalent.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MarketingStatus.status",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MarketingStatus.status",
+        "rationale": "Both R4 and R5 elements represent the status of the marketing of the medicinal product, with identical names and definitions.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MarketingStatus.dateRange",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MarketingStatus.dateRange",
+        "rationale": "Direct renaming of the element from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Medication.form",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Medication.doseForm",
+        "rationale": "In R5, 'Medication.doseForm' is the direct equivalent of R4's 'Medication.form' with the same concept of describing the form of the medication (e.g., powder, tablets, capsule).",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Medication.amount",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Medication.totalVolume",
+        "rationale": "R5's 'Medication.totalVolume' replaces R4's 'Medication.amount', capturing the quantity of the drug in the package.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationAdministration.context",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationAdministration.encounter",
+        "rationale": "Renamed to more accurately reflect that this is about the encounter during which the administration was performed",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationAdministration.effective[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationAdministration.occurence[x]",
+        "rationale": "Renaming of the element from 'effective[x]' to 'occurence[x]' but continues to represent the time period during which the medication was administered.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationAdministration.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationAdministration.reason",
+        "rationale": "In FHIR R5, the 'reasonCode' has been replaced by the broader 'reason' element, which can incorporate conditions or observations supporting the administration of the medication.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationAdministration.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationAdministration.reason",
+        "rationale": "R5 element represents the reason why the medication was administered and can include a reference to a Condition or an Observation, similar to reasonReference in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationDispense.statusReason[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationDispense.notPerformedReason",
+        "rationale": "This element captures the reason why a dispense was not performed, which is semantically similar to the R4 'statusReason[x]' element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationDispense.context",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationDispense.encounter",
+        "rationale": "The element has been renamed from 'context' to 'encounter' to better reflect its meaning, which is the encounter associated with the MedicationDispense event.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.doseForm",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.definitional.doseForm",
+        "rationale": "The 'doseForm' element in R4 has been renamed and relocated under 'definitional' in R5 but preserves its intention to describe the form of the item.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.synonym",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.name",
+        "rationale": "Represents synonymous or other names for the medication.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.ingredient.item[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.definitional.ingredient.item",
+        "rationale": "The R5 element retains the essence and purpose of representing the referenced substances contained in the medication, thus carrying over the concept and structure of the R4 element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.ingredient.strength",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.definitional.ingredient.strength[x]",
+        "rationale": "The R5 element is a direct equivalent continuation of the R4 element, with the same purpose of indicating the strength of the ingredient in the medication but with an [x] because it can be one of several types.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.intendedRoute",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.definitional.intendedRoute",
+        "rationale": "Both elements represent the intended or approved route of administration for the medication.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.administrationGuidelines.dosage.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.type",
+        "rationale": "Both elements describe the type or category of dosage for given medication guidelines.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.administrationGuidelines.dosage.dosage",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.dosage",
+        "rationale": "Both R4 and R5 elements represent detailed dosage information within guidelines for medication administration.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.administrationGuidelines.indication[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.indicationGuideline.indication",
+        "rationale": "Renamed and retains the intended use or reasons for administering the medication.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.characteristic[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.type",
+        "rationale": "Captures the type of characteristic relevant to administration guidelines, which directly aligns with the R4 characteristic definition.",
+        "qualityOfMatch": "strong"
+      },
+      {
+        "R5ElementId": "MedicationKnowledge.definitional.ingredient.type",
+        "rationale": "Although not a direct match, it captures a type definition for an ingredient which may indirectly relate to patient characteristics.",
+        "qualityOfMatch": "weak"
+      },
+      {
+        "R5ElementId": "MedicationKnowledge.definitional.drugCharacteristic.type",
+        "rationale": "Pertains to the medication's characteristics rather than patient characteristics, indicating a weak match for the specific use case of patient characteristics.",
+        "qualityOfMatch": "weak"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.administrationGuidelines.patientCharacteristics.value",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]",
+        "rationale": "Both the R4 and R5 elements capture the specific characteristic values that are relevant to the administration guidelines of a medication.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.drugCharacteristic.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.definitional.drugCharacteristic.type",
+        "rationale": "Direct renaming of the element from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.drugCharacteristic.value[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.definitional.drugCharacteristic.value[x]",
+        "rationale": "Direct renaming of the element with additional detailed description types.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.contraindication",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.clinicalUseIssue",
+        "rationale": "R5's clinicalUseIssue can represent various clinical issues including contraindications, mirroring the intent of R4's contraindication.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationKnowledge.regulatory.schedule.schedule",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationKnowledge.regulatory.schedule",
+        "rationale": "The R5 element maintains the same concept and structure for the schedule of a medication in jurisdiction, but now uses a CodeableConcept rather than a nested element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationRequest.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationRequest.reason",
+        "rationale": "In R5, the 'reason' element can include 'reasonCode' or 'reasonReference' from R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationRequest.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationRequest.reason",
+        "rationale": "The scope of 'reasonReference' in R4 is now covered by 'reason' in R5, specifically as 'reason' can take a reference to a Condition or Observation.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationRequest.dispenseRequest.performer",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationRequest.dispenseRequest.dispenser",
+        "rationale": "In FHIR R5, 'MedicationRequest.dispenseRequest.performer' has been renamed to 'MedicationRequest.dispenseRequest.dispenser' to indicate the intended performing Organization that will dispense the medication.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationStatement.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationStatement.reason",
+        "rationale": "renamed to 'reason' to accommodate both codified and referential data",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MedicationStatement.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MedicationStatement.reason",
+        "rationale": "Represents a direct renaming from 'reasonReference' to 'reason', which now accepts a CodeableReference that can include reference to a Condition or Observation, similarly as the R4 'reasonReference'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.referenceSeq.chromosome",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.relative.startingSequence.chromosome",
+        "rationale": "The R5 element represents a chromosome identifier within a starting sequence, which is the context where R4's chromosome identifier was used.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.referenceSeq.orientation",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.relative.startingSequence.orientation",
+        "rationale": "Captures the orientation of the sequence in the same manner as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.referenceSeq.referenceSeqString",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.relative.startingSequence.sequence[x]",
+        "rationale": "Represents the reference sequence, which can include direct string representation as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.referenceSeq.strand",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.relative.startingSequence.strand",
+        "rationale": "Both elements represent an absolute reference to a strand within a sequence, with R4 referencing the Sequence Ontology's definition directly ('watson' | 'crick') and R5 following the same concept but with an explicit mention of the 5'-end positioning (e.g., 'watson' for the strand whose 5'-end is on the short arm of the chromosome).",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.referenceSeq.windowStart",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.relative.startingSequence.windowStart",
+        "rationale": "Directly corresponds to the R4 'windowStart' element of a reference sequence, indicating the start position on the reference sequence.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.referenceSeq.windowEnd",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.relative.startingSequence.windowEnd",
+        "rationale": "Both elements describe the end position of the window on the reference sequence in the sequence resource.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.variant.end",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.relative.edit.end",
+        "rationale": "Represents the end position of an edit on the starting sequence, which is a direct equivalent to the R4 end position of a variant.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.variant.observedAllele",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.relative.edit.replacementSequence",
+        "rationale": "Both elements describe the allele that was observed in the sequence data.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.variant.referenceAllele",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.relative.edit.replacedSequence",
+        "rationale": "This element represents the allele in the starting reference sequence, which is equivalent to the R4 element describing the allele in the reference sequence.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "MolecularSequence.observedSeq",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "MolecularSequence.literal",
+        "rationale": "In R5, the 'observedSeq' from R4 seems to be represented as 'literal', which captures the sequence that was observed.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "NutritionOrder.patient",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "NutritionOrder.subject",
+        "rationale": "In R5, the 'patient' element has been renamed to 'subject' to generalize the use case to include other subjects such as groups.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "NutritionOrder.enteralFormula.additiveType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "NutritionOrder.enteralFormula.additive.type",
+        "rationale": "Element has been renamed but retains similar purpose and structure, specifying the type of modular component to add to the enteral feeding.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "NutritionOrder.enteralFormula.additiveProductName",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "NutritionOrder.enteralFormula.additive.productName",
+        "rationale": "Direct renaming of the element from R4 to R5 with no change in definition.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "NutritionOrder.enteralFormula.routeofAdministration",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "NutritionOrder.enteralFormula.routeOfAdministration",
+        "rationale": "Direct renaming and matching concept in R5 from 'routeofAdministration' to 'routeOfAdministration'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition",
+        "rationale": "Direct equivalent with the same semantic meaning.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.meta",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.meta",
+        "rationale": "Direct equivalent in R5, with the same element id and meaning.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.implicitRules",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.implicitRules",
+        "rationale": "The R5 element has the same name and carries over the same concept from R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.language",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.language",
+        "rationale": "The R5 element has the same name and serves the same purpose as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.text",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.text",
+        "rationale": "Both elements have the same name and definition, indicating that they carry over the same purpose and usage between R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.contained",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.contained",
+        "rationale": "Both R4 and R5 have a 'contained' element with the same name and similar definition, used to include resources inline within the ObservationDefinition resource.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.category",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.category",
+        "rationale": "This direct target element is essentially unchanged from R4 to R5 and retains the same element path and meaning.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.code",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.code",
+        "rationale": "The element retains the same name and similar definition, indicating it has the same purpose and usage.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.identifier",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.identifier",
+        "rationale": "Unchanged element identifier carrying over the same concept and definition between R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.permittedDataType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.permittedDataType",
+        "rationale": "Direct carry-over from R4 to R5 with the same name and purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.multipleResultsAllowed",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.multipleResultsAllowed",
+        "rationale": "Both R4 and R5 elements have the same name and definition, indicating that they are direct equivalents.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.method",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.method",
+        "rationale": "Directly equivalent by name and definition, representing the method used to perform the observation.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.preferredReportName",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.preferredReportName",
+        "rationale": "The element name and definition have been preserved from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.qualifiedInterval.category",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.rangeCategory",
+        "rationale": "In R5, the 'ObservationDefinition.qualifiedValue.rangeCategory' seems to serve the purpose of categorizing the ranges for observation results, which directly aligns with the R4 element's purpose of classifying intervals.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.qualifiedInterval.range",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.range",
+        "rationale": "Direct renaming from R4 to R5 maintaining the same concept and structure for the range of values for observations.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.qualifiedInterval.context",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.context",
+        "rationale": "This element in R5 provides context qualification for a set of qualified values, similar to R4 counterpart for qualified intervals.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.qualifiedInterval.appliesTo",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.appliesTo",
+        "rationale": "Element retains the same name and similar definition, representing the target population the range applies to.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.qualifiedInterval.gender",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.gender",
+        "rationale": "Both elements represent the gender to which the qualified interval/values is applicable.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.qualifiedInterval.age",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.age",
+        "rationale": "Direct naming and purpose match; defines the applicable age range for a set of qualified values.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.qualifiedInterval.gestationalAge",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.gestationalAge",
+        "rationale": "Direct renaming from R4 to R5, maintaining the context of gestational age for the qualified interval.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.qualifiedInterval.condition",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.condition",
+        "rationale": "The element has been directly renamed from 'qualifiedInterval' in R4 to 'qualifiedValue' in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.validCodedValueSet",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.validCodedValueSet",
+        "rationale": "The R5 element maintains the concept of providing a value set for valid coded values in observations, intended for a similar purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.normalCodedValueSet",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.normalCodedValueSet",
+        "rationale": "Direct renaming of the element from R4 to R5, representing the same concept.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.abnormalCodedValueSet",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.abnormalCodedValueSet",
+        "rationale": "The R5 element retains the concept of an abnormal value set for coded observation values.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ObservationDefinition.criticalCodedValueSet",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ObservationDefinition.qualifiedValue.criticalCodedValueSet",
+        "rationale": "The direct equivalent in R5 retains the same concept and similar naming.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "OrganizationAffiliation.telecom",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "OrganizationAffiliation.contact",
+        "rationale": "This element in R5 is intended to represent the official contact details relevant to the affiliation, which is a logical successor to telecom in R4 meant for contact points.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentNotice.provider",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentNotice.reporter",
+        "rationale": "The 'provider' in R4 seems to have been renamed to 'reporter' in R5, both indicating the party responsible in the context of the PaymentNotice.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.paymentDate",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.date",
+        "rationale": "In FHIR R5, 'PaymentReconciliation.paymentDate' has been renamed to 'PaymentReconciliation.date'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.paymentAmount",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.amount",
+        "rationale": "Represents the total payment amount in R5 similar to R4's PaymentReconciliation.paymentAmount.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.detail.identifier",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.allocation.identifier",
+        "rationale": "Direct renaming of the element from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.detail.predecessor",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.allocation.predecessor",
+        "rationale": "Direct equivalent with updated nomenclature from 'detail' to 'allocation'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.detail.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.allocation.type",
+        "rationale": "The 'type' element serves the same purpose, representing the nature of the payment in both R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.detail.submitter",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.allocation.submitter",
+        "rationale": "Direct renaming from R4 to R5 with the same concept of party submitting the claim.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.detail.response",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.allocation.response",
+        "rationale": "Direct renaming from R4 to R5, maintains the reference to the resource that contains a commitment to payment.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.detail.date",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.allocation.date",
+        "rationale": "Renaming of the same concept with the same definition and element type.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.detail.responsible",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.allocation.responsible",
+        "rationale": "Direct renaming from R4 to R5, representing a reference to the individual responsible for the payment.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.detail.payee",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.allocation.payee",
+        "rationale": "The element retains the same concept of the party receiving the payment.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PaymentReconciliation.detail.amount",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PaymentReconciliation.allocation.amount",
+        "rationale": "Both elements represent a monetary amount distributed from the total payment to a payable.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PlanDefinition.action.relatedAction.actionId",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PlanDefinition.action.relatedAction.targetId",
+        "rationale": "In FHIR R5, 'PlanDefinition.action.relatedAction.actionId' has been renamed to 'PlanDefinition.action.relatedAction.targetId'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "PractitionerRole.telecom",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "PractitionerRole.contact",
+        "rationale": "The 'telecom' element in R4 has been renamed to 'contact' in R5, which now accommodates communication devices available relevant to the specific PractitionerRole.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Procedure.performed[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Procedure.occurrence[x]",
+        "rationale": "Renamed to represent when the procedure occurred or is occurring, with additional type 'Timing' added.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Procedure.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Procedure.reason",
+        "rationale": "In R5, Procedure.reasonCode and Procedure.reasonReference are combined into Procedure.reason, a CodeableReference, to provide the reason the procedure was performed.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Procedure.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Procedure.reason",
+        "rationale": "The 'reason' element in R5 replaces 'reasonCode' and 'reasonReference' from R4, now using CodeableReference to support both direct codes and references.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Procedure.complicationDetail",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Procedure.complication",
+        "rationale": "In FHIR R5, 'Procedure.complication' is a CodeableReference that can reference a Condition resource, which captures the same concept as R4's 'Procedure.complicationDetail' that directly references a Condition resource as a complication following the procedure.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Procedure.usedReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Procedure.used",
+        "rationale": "The R5 element 'Procedure.used' directly corresponds to 'Procedure.usedReference' from R4, but has been expanded to include both references and coded elements, ensuring compatibility with R4 content.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Procedure.usedCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Procedure.used",
+        "rationale": "In FHIR R5, 'Procedure.used' captures medications, devices, and other substances used in the procedure. It can include coded items similar to 'Procedure.usedCode' from R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ProductShelfLife",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ProductShelfLife",
+        "rationale": "The element has the same name and definition in both R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ProductShelfLife.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ProductShelfLife.type",
+        "rationale": "Both elements share identical names and have the same intended use, as described in the short definition and full definition of each element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ProductShelfLife.period",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ProductShelfLife.period[x]",
+        "rationale": "The R5 period[x] has been updated to handle both Duration and string types, indicating that it covered the same concept of period as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ProductShelfLife.specialPrecautionsForStorage",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ProductShelfLife.specialPrecautionsForStorage",
+        "rationale": "Direct equivalent in name and definition from R4 to R5, describing special storage precautions.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ResearchStudy.location",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ResearchStudy.region",
+        "rationale": "The R5 'ResearchStudy.region' element seems to capture the geographic area where the study is taking place, which aligns with the purpose of the R4 'ResearchStudy.location' element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ResearchStudy.enrollment",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ResearchStudy.recruitment",
+        "rationale": "In R5, the concept of enrollment is encompassed within the recruitment backbone element, capturing details about participants' enrollment.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ResearchStudy.reasonStopped",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ResearchStudy.whyStopped",
+        "rationale": "Maintains the same concept and definition for representing why a study was terminated.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ResearchStudy.arm.name",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ResearchStudy.comparisonGroup.name",
+        "rationale": "The 'arm' concept in R4 seems to directly correspond to the 'comparisonGroup' in R5, with 'name' being a label for both.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ResearchStudy.arm.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ResearchStudy.comparisonGroup.type",
+        "rationale": "The R5 'comparisonGroup.type' element serves as a direct equivalent to the R4 'ResearchStudy.arm.type', representing a categorization of the group or arm of the research study.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ResearchStudy.arm.description",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ResearchStudy.comparisonGroup.description",
+        "rationale": "In R5, the 'arm' structure has been renamed to 'comparisonGroup', maintaining the same concept and purpose, including the description.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ResearchSubject.individual",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ResearchSubject.subject",
+        "rationale": "Represents the target equivalent of 'individual' in R5, renamed to 'subject'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ResearchSubject.assignedArm",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ResearchSubject.assignedComparisonGroup",
+        "rationale": "The 'assignedComparisonGroup' in R5 serves the same purpose as 'assignedArm' in R4, which is to indicate the expected path for the research subject as part of the study.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ResearchSubject.actualArm",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ResearchSubject.actualComparisonGroup",
+        "rationale": "Represents the path that was actually followed by the subject in the study, which is a direct renaming from R4 'actualArm' to R5 'actualComparisonGroup'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "RiskAssessment.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "RiskAssessment.reason",
+        "rationale": "In R5, 'RiskAssessment.reasonCode' and 'RiskAssessment.reasonReference' are consolidated into a single element 'RiskAssessment.reason' that can handle both coded and reference data.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "RiskAssessment.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "RiskAssessment.reason",
+        "rationale": "In FHIR R5, 'reasonReference' has been replaced with 'reason', which can include references to reasoning resources.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SampledData.period",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SampledData.interval",
+        "rationale": "Renaming of the element to represent the duration between samples more generally",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ServiceRequest.locationCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ServiceRequest.location",
+        "rationale": "Both elements represent the requested location for the service to be performed, but R5 uses a CodeableReference instead of a CodeableConcept.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ServiceRequest.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ServiceRequest.reason",
+        "rationale": "The R5 'reason' element appears to directly replace the R4 'reasonCode' element, capturing the explanation or justification for the service in a codable form.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "ServiceRequest.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "ServiceRequest.reason",
+        "rationale": "Renamed to encompass both reason codes and references to other resources that provide the reason for the service request.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Specimen.processing.procedure",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Specimen.collection.device",
+        "rationale": "R4 'Specimen.processing.procedure' appears to have been replaced with R5 'Specimen.collection.device', indicating the device used during the collection, which could encompass the procedural aspect.",
+        "qualityOfMatch": "medium"
+      },
+      {
+        "R5ElementId": "Specimen.processing.method",
+        "rationale": "R5 'Specimen.processing.method' defines the method used to process the specimen, which semantically aligns with R4 'Specimen.processing.procedure'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Subscription.channel.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Subscription.channelType",
+        "rationale": "Direct renaming of the element from R4 to R5 reflecting the channel type concept.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Subscription.channel.endpoint",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Subscription.endpoint",
+        "rationale": "Both elements represent the URL endpoint for sending notifications.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Subscription.channel.payload",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Subscription.contentType",
+        "rationale": "R5's 'Subscription.contentType' serves to specify the MIME type for the notification payload, similar to R4's 'Subscription.channel.payload' which defines the MIME type to send.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Substance.instance.expiry",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Substance.expiry",
+        "rationale": "The target element captures the exact concept of the expiry date/time of the substance.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Substance.instance.quantity",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Substance.quantity",
+        "rationale": "Direct renaming from R4 to R5, preserving the meaning and use of the element as the quantity of the substance.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid",
+        "rationale": "Direct renaming of the element in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.meta",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.meta",
+        "rationale": "Both elements represent metadata about the resource, and no structural changes to the element are indicated between R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.implicitRules",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.implicitRules",
+        "rationale": "The 'implicitRules' element definition in R5 appears to map directly to the R4 definition with no changes to its semantics.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.language",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.language",
+        "rationale": "The element definition in R5 matches that of R4 without changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.text",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.text",
+        "rationale": "The naming and definition of the element remain unchanged from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.contained",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.contained",
+        "rationale": "The definition of 'SubstanceNucleicAcid.contained' in R5 includes additional details about allowing a Parameters resource but remains fundamentally the same in purpose and structure.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.sequenceType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.sequenceType",
+        "rationale": "Direct renaming of the element with no changes in definition or cardinality.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.numberOfSubunits",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.numberOfSubunits",
+        "rationale": "Both R4 and R5 have the same definition, structure, and purpose for this element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.areaOfHybridisation",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.areaOfHybridisation",
+        "rationale": "The element has the same name and definition in R5 as it does in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.subunit",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.subunit",
+        "rationale": "Element appears to be retained with the same name and concept in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.sequence",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.sequence",
+        "rationale": "The element has the same name and is expected to capture the same information in R5 as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.length",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.length",
+        "rationale": "Element has the same path in R5, indicating a direct equivalent exists.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.fivePrime",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.fivePrime",
+        "rationale": "Direct name and definition match indicate an equivalent element without changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.threePrime",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.threePrime",
+        "rationale": "The target element has the same name and assumes the same role in the structure, indicating a direct equivalent with no changes in definition, cardinality, or type.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.linkage.connectivity",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.linkage.connectivity",
+        "rationale": "The R5 substance nucleic acid resource retains the element with the same name and similar definition regarding the linkage of sugar residues, indicating a direct equivalent.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.linkage.identifier",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.linkage.identifier",
+        "rationale": "The definition and context are the same in R4 and R5 for the SubstanceNucleicAcid.subunit.linkage.identifier element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.linkage.name",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.linkage.name",
+        "rationale": "Direct equivalent with same element id and definition.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.linkage.residueSite",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.linkage.residueSite",
+        "rationale": "The element has the same name and definition in both R4 and R5, indicating it was carried over without changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.sugar.identifier",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.sugar.identifier",
+        "rationale": "The R5 element has the same name and is expected to have the same usage as the R4 element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.sugar.name",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.sugar.name",
+        "rationale": "The element has the same name and definition in R4 and R5, indicating it is a direct equivalent with no changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceNucleicAcid.subunit.sugar.residueSite",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceNucleicAcid.subunit.sugar.residueSite",
+        "rationale": "Both the R4 and R5 elements have the same name and definition, indicating a direct carry-over from R4 to R5 without changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer",
+        "rationale": "Both R4 and R5 elements represent the root element for the SubstancePolymer resource and share the same purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.meta",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.meta",
+        "rationale": "Both R4 and R5 retain the 'meta' element with the same definition and purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.implicitRules",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.implicitRules",
+        "rationale": "Both R4 and R5 include an 'implicitRules' element with identical definition and purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.language",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.language",
+        "rationale": "The R5 element has the same name and retains the same purpose as the R4 element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.text",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.text",
+        "rationale": "Both elements share the same name and represent a human-readable summary of the substance polymer resource.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.contained",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.contained",
+        "rationale": "Directly retained with similar definition in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.class",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.class",
+        "rationale": "Both R4 and R5 have an element with the same name and similar definition which represents the overall type of the polymer.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.geometry",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.geometry",
+        "rationale": "Both R4 and R5 elements have the same name and convey information about the polymer's geometry.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.copolymerConnectivity",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.copolymerConnectivity",
+        "rationale": "Both R4 and R5 have SubstancePolymer.copolymerConnectivity with the same name and similar definition.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.monomerSet.ratioType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.monomerSet.ratioType",
+        "rationale": "Direct renaming of the element from R4 to R5 with no changes in definition.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.monomerSet.startingMaterial.material",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.monomerSet.startingMaterial.code",
+        "rationale": "Direct renaming of the element to better reflect that it is a codeable concept.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.monomerSet.startingMaterial.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.monomerSet.startingMaterial.code",
+        "rationale": "The R5 'startingMaterial.code' element aligns with the R4 'startingMaterial.type' as both represent the type of substance used as a starting material in the substance polymer.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.monomerSet.startingMaterial.isDefining",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.monomerSet.startingMaterial.isDefining",
+        "rationale": "The R5 element has the same name and retains the definition and purpose as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.monomerSet.startingMaterial.amount",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.monomerSet.startingMaterial.amount",
+        "rationale": "Direct renaming of the element without changes in definition or cardinality",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.repeat.numberOfUnits",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.repeat.repeatUnit.amount",
+        "rationale": "The closest equivalent in R5 that represents the number of repeat units.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.repeat.averageMolecularFormula",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.repeat.averageMolecularFormula",
+        "rationale": "The element retains the same name and placement in the SubstancePolymer resource structure.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.repeat.repeatUnitAmountType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.repeat.repeatUnitAmountType",
+        "rationale": "Retained with a direct name match from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.repeat.repeatUnit.orientation",
+        "rationale": "The R5 element captures the orientation of polymerisation similar to R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.repeat.repeatUnit.repeatUnit",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.repeat.repeatUnit.unit",
+        "rationale": "The R5 element 'unit' appears to be a direct renaming of the R4 'repeatUnit'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type",
+        "rationale": "Both elements share the same path and represent the type of structural representation in the respective versions of FHIR.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation",
+        "rationale": "Element exists with the same name and context in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment",
+        "rationale": "Direct renaming of the element from R4 to R5 with the same structure and definition, indicating strong compatibility.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein",
+        "rationale": "Both R4 and R5 SubstanceProtein have identical definitions and serve the same purpose in representing a single unit of a linear amino acid sequence or a combination of subunits with a defined invariant stoichiometric relationship.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.meta",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.meta",
+        "rationale": "The definition and usage of 'meta' has not changed from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.implicitRules",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.implicitRules",
+        "rationale": "Identical element id, definition, and usage indicating that this element is a direct match from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.language",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.language",
+        "rationale": "Both R4 and R5 have a 'language' element at the root level with the same definition, indicating the language in which the resource is written.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.text",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.text",
+        "rationale": "Direct equivalent, as the definition and purpose of the element remain the same in both R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.contained",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.contained",
+        "rationale": "Both R4 and R5 substanceProtein.contained elements have equivalent definitions and serve the same purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.sequenceType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.sequenceType",
+        "rationale": "The element maintains the same name and concept in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.numberOfSubunits",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.numberOfSubunits",
+        "rationale": "The element has the same name and definition in both R4 and R5, indicating it has been carried forward without changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.disulfideLinkage",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.disulfideLinkage",
+        "rationale": "The element retains the same name and definition from R4 to R5, indicating it serves the same purpose and contains equivalent data.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.subunit.subunit",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.subunit.subunit",
+        "rationale": "The R5 element retains the same name and definition, indicating a direct equivalence.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.subunit.sequence",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.subunit.sequence",
+        "rationale": "The element has the same name and definition in R5, indicating that it serves the same purpose and contains the same type of data.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.subunit.length",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.subunit.length",
+        "rationale": "The R4 'SubstanceProtein.subunit.length' element directly corresponds to the R5 'SubstanceProtein.subunit.length' element with no changes in the definition or the expected data type, indicating a strong match.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.subunit.sequenceAttachment",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.subunit.sequenceAttachment",
+        "rationale": "Directly retains the element name and definition from R4 to R5 with no changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.subunit.nTerminalModificationId",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.subunit.nTerminalModificationId",
+        "rationale": "Direct renaming of the same element from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.subunit.nTerminalModification",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.subunit.nTerminalModification",
+        "rationale": "The element has the same name and definition in both versions, indicating it is a direct equivalent.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.subunit.cTerminalModificationId",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.subunit.cTerminalModificationId",
+        "rationale": "Direct renaming of the element from R4 to R5 with maintenance of its semantic meaning.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceProtein.subunit.cTerminalModification",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceProtein.subunit.cTerminalModification",
+        "rationale": "The element is directly carried over from R4 to R5 with the same name and concept, representing the modification at the C-terminal of the SubstanceProtein.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation",
+        "rationale": "Both R4 and R5 have a SubstanceReferenceInformation resource with the same name, serving as the root for the resource elements.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.meta",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.meta",
+        "rationale": "The element has the same name and definition in both R4 and R5, indicating it is a direct equivalent.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.implicitRules",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.implicitRules",
+        "rationale": "The element definition and attributes remain unchanged from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.language",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.language",
+        "rationale": "Both the R4 and R5 elements have the same element id, indicating no change in element name or intended use.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.text",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.text",
+        "rationale": "The element has the same name and definition in both R4 and R5, indicating direct equivalence.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.contained",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.contained",
+        "rationale": "The definition and usage are the same with a slight change in the definition detail, including resource containment.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.gene.gene",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.gene.gene",
+        "rationale": "The target element has the same element path, indicating a direct equivalent with no changes in naming or structure.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.gene.source",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.gene.source",
+        "rationale": "The element path and definition have not changed from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.geneElement.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.geneElement.type",
+        "rationale": "Direct naming and definition correspondence between R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.geneElement.element",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.geneElement.element",
+        "rationale": "The element retains the same name and purpose in FHIR R5 as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.geneElement.source",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.geneElement.source",
+        "rationale": "The element is retained with the same name and path in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.target.target",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.target.target",
+        "rationale": "Direct equivalence by element ID and similar definition across both versions.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.target.type",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.target.type",
+        "rationale": "Element has the same name and is likely to carry over the same concept.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.target.interaction",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.target.interaction",
+        "rationale": "The element retains its name and purpose in R5, representing a direct and unchanged continuation between versions.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.target.organism",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.target.organism",
+        "rationale": "The element id is identical in R4 and R5, indicating the element name and likely its purpose have been retained.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.target.organismType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.target.organismType",
+        "rationale": "The element name and definition have not changed.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.target.amount[x]",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.target.amount[x]",
+        "rationale": "Direct equivalent by name and definition.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.target.amountType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.target.amountType",
+        "rationale": "The naming and context of the element have been directly retained from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceReferenceInformation.target.source",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceReferenceInformation.target.source",
+        "rationale": "Element has the same name and is intended to fulfill the same role in R5 as it did in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial",
+        "rationale": "The R5 element has the same name and retains the purpose and scope in capturing details about the taxonomic and anatomical origins of a substance as well as the fraction information.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.meta",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.meta",
+        "rationale": "Direct equivalent with the same definition.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.implicitRules",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.implicitRules",
+        "rationale": "Directly retained from R4 with no changes to its definition or usage.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.language",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.language",
+        "rationale": "Both R4 and R5 elements represent the base language in which the resource is written.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.text",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.text",
+        "rationale": "Both elements share the same name and definition, indicating they serve the same purpose of providing a human-readable narrative of the resource.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.contained",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.contained",
+        "rationale": "The element has the same name and similar definition in both R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.sourceMaterialClass",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.sourceMaterialClass",
+        "rationale": "The R5 element has the same name and captures the same high-level classification of the source material as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.sourceMaterialType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.sourceMaterialType",
+        "rationale": "Elements have the same name and maintain the same meaning and usage across R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.sourceMaterialState",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.sourceMaterialState",
+        "rationale": "The element 'sourceMaterialState' is present in R4 with the exact same name and similar definition in R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organismId",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organismId",
+        "rationale": "Element with the same name and definition persists from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organismName",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organismName",
+        "rationale": "Directly retained in R5 with the same element id indicating an unchanged concept.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.parentSubstanceId",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.parentSubstanceId",
+        "rationale": "The R5 definition and usage appear consistent with the R4 definition, indicating a direct equivalent with no changes in naming or intended use.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.parentSubstanceName",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.parentSubstanceName",
+        "rationale": "The element has the same name and definition in both R4 and R5, indicating a direct equivalent with no changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.countryOfOrigin",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.countryOfOrigin",
+        "rationale": "The R5 element has the same name and retains the same purpose and usage as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.geographicalLocation",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.geographicalLocation",
+        "rationale": "Directly retained element with the same name and definition from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.developmentStage",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.developmentStage",
+        "rationale": "The element retains the same name and definition from R4 to R5, representing the stage of life for animals, plants, insects, and microorganisms.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.fractionDescription.fraction",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.fractionDescription.fraction",
+        "rationale": "The R5 target element has the same name and definition as the R4 source element, indicating it is a direct equivalent.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.fractionDescription.materialType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.fractionDescription.materialType",
+        "rationale": "There is a direct naming and definition match between the R4 and R5 elements.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.family",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.family",
+        "rationale": "Direct retention of the element with the same structure and semantics.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.genus",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.genus",
+        "rationale": "The element has the same name and definition indicating the purpose has not changed.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.species",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.species",
+        "rationale": "Both R4 and R5 versions of the SubstanceSourceMaterial have an 'organism.species' element with identical definition and purpose, indicating it has been carried forward without changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.intraspecificType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.intraspecificType",
+        "rationale": "The element retains the same name and definition from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.intraspecificDescription",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.intraspecificDescription",
+        "rationale": "Direct renaming of the element with no changes in the definition or structure.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.author.authorType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.author.authorType",
+        "rationale": "Direct element name match from R4 to R5, no changes in the element path, indicating no renaming or restructuring.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.author.authorDescription",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.author.authorDescription",
+        "rationale": "The element maintains the same identifier and definition from R4 to R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.hybrid.maternalOrganismId",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.hybrid.maternalOrganismId",
+        "rationale": "The element id is the same in R4 and R5, indicating it has been carried forward without changes.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.hybrid.maternalOrganismName",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.hybrid.maternalOrganismName",
+        "rationale": "The element name and definition are identical between R4 and R5, indicating a direct match.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.hybrid.paternalOrganismId",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.hybrid.paternalOrganismId",
+        "rationale": "Both R4 and R5 elements capture the identifier of the paternal species constituting the hybrid organism.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.hybrid.paternalOrganismName",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.hybrid.paternalOrganismName",
+        "rationale": "Direct equivalent in R5 with the same meaning and usage.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.hybrid.hybridType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.hybrid.hybridType",
+        "rationale": "Directly equivalent by name and definition.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.organismGeneral.kingdom",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.organismGeneral.kingdom",
+        "rationale": "Both R4 and R5 have an element with the same name and intended use within the SubstanceSourceMaterial resource.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.organismGeneral.phylum",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.organismGeneral.phylum",
+        "rationale": "The R5 element has the same name and is intended to capture the same information as the R4 element.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.organismGeneral.class",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.organismGeneral.class",
+        "rationale": "The R5 element path has the same structure and meaning as the R4 element path, indicating a direct equivalent.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.organism.organismGeneral.order",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.organism.organismGeneral.order",
+        "rationale": "The element is unchanged from R4 to R5 and serves the same purpose of specifying the order of an organism.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.partDescription.part",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.partDescription.part",
+        "rationale": "The target element has the same name and appears to maintain the same context and purpose in R5 as in R4.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SubstanceSourceMaterial.partDescription.partLocation",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SubstanceSourceMaterial.partDescription.partLocation",
+        "rationale": "Element has the same name and definition in both R4 and R5.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SupplyRequest.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SupplyRequest.reason",
+        "rationale": "The 'reason' element in R5 replaces 'reasonCode' from R4 to express why the supply item was requested.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "SupplyRequest.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "SupplyRequest.reason",
+        "rationale": "In R5, the 'reason' element is used to describe the reason why the supply item was requested, capturing the concept from 'reasonReference' in R4, and allows for both CodeableConcept and References, thus providing the functionality of R4's 'reasonCode' and 'reasonReference'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Task.performerType",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Task.requestedPerformer",
+        "rationale": "In R5, 'requestedPerformer' replaces 'performerType' to specify the kind of participant that should perform the task.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Task.reasonCode",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Task.reason",
+        "rationale": "The R5 'Task.reason' is a direct equivalent to R4’s 'Task.reasonCode', having a similar definition and purpose.",
+        "qualityOfMatch": "strong"
+      }
+    ]
+  },
+  {
+    "R4ElementId": "Task.reasonReference",
+    "potentialR5Targets": [
+      {
+        "R5ElementId": "Task.reason",
+        "rationale": "In FHIR R5, the 'Task.reasonReference' element was broadened to 'Task.reason' to include both references and codes, allowing for a 'CodeableReference' that can carry both a 'CodeableConcept' and a 'Reference'.",
+        "qualityOfMatch": "strong"
+      }
+    ]
   }
 ]
